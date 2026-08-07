@@ -125,6 +125,17 @@ main{flex:1;display:flex;flex-direction:column}
   .release--alt .release__title{display:block;margin-right:-170px}
 }
 
+/* ---- Single (smaller than the EPs) ---- */
+.single{
+  max-width:520px;
+  margin:clamp(56px,8vw,96px) auto 0;
+  padding:clamp(28px,4vw,40px) clamp(20px,4vw,40px) 0;
+  border-top:1px solid var(--line);
+}
+.single__meta{font-size:11px;line-height:1;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.single__title{font-weight:700;font-size:clamp(22px,3.4vw,34px);line-height:.95;letter-spacing:-.035em;margin:0 0 18px}
+.single__embed{display:block;width:100%;border:0;border-radius:12px}
+
 /* ================= ABOUT ================= */
 .about-hero{background:var(--paper);color:var(--ink);padding:clamp(50px,8vw,100px) clamp(20px,4vw,40px)}
 .about-hero__inner{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:clamp(30px,5vw,70px)}
@@ -220,6 +231,12 @@ main{flex:1;display:flex;flex-direction:column}
         </div>
         <iframe class="embed" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1350698&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" width="100%" height="450" style="display:block;width:100%;max-width:420px;border:0;border-radius:12px" scrolling="no" loading="lazy" allow="autoplay; encrypted-media" title="Half Concrete Mind — Andrea's Kit on SoundCloud"></iframe>
       </div>
+    </article>
+
+    <article class="single">
+      <div class="single__meta mono">Also out — from the album Magic Waves</div>
+      <h2 class="single__title">cosmic rider</h2>
+      <iframe class="single__embed" src="https://open.spotify.com/embed/track/5dQbgW3aoSAWvRfwlUaaZX?theme=0" width="100%" height="152" style="display:block;width:100%;max-width:480px;border:0;border-radius:12px" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen title="Cosmic Rider — Andrea's Kit on Spotify"></iframe>
     </article>
 
   </section>
