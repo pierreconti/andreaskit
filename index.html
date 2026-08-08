@@ -166,16 +166,11 @@ main{flex:1;display:flex;flex-direction:column}
 .bio{font-size:15px;line-height:1.7;color:var(--paper)}
 .portrait{width:100%;max-width:360px;aspect-ratio:1;object-fit:cover;display:block;border-radius:12px}
 
-/* ================= CONTACT ================= */
-.contact{padding:clamp(50px,10vw,130px) clamp(20px,4vw,40px)}
-.contact__inner{max-width:1200px;margin:0 auto}
-.contact__block{display:flex;flex-direction:column;gap:clamp(14px,2vw,22px);margin-bottom:clamp(50px,8vw,90px)}
-.contact__email{
-  font-weight:700;font-size:clamp(30px,5.6vw,72px);line-height:1.06;letter-spacing:-.045em;
-  width:max-content;max-width:100%;word-break:break-word;
-}
-.contact__email:hover{color:var(--accent)}
-.contact__note{font-size:12px;line-height:1.7;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+/* ---- Contact (merged into About) ---- */
+.about-contact{display:flex;flex-direction:column;gap:14px;align-items:flex-start;margin-top:8px}
+.about-contact__label{font-size:11px;line-height:1;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.about-contact__email{font-weight:700;font-size:clamp(18px,1.7vw,22px);letter-spacing:-.02em;max-width:100%;word-break:break-word}
+.about-contact__email:hover{color:var(--accent)}
 .socials{display:flex;flex-wrap:wrap;gap:14px}
 .socials a{
   display:inline-flex;align-items:center;
@@ -206,7 +201,6 @@ main{flex:1;display:flex;flex-direction:column}
   <nav class="nav" aria-label="Primary">
     <a href="#music" data-screen="music">music</a>
     <a href="#about" data-screen="about">about</a>
-    <a href="#contact" data-screen="contact">contact</a>
   </nav>
 </header>
 
@@ -270,23 +264,15 @@ main{flex:1;display:flex;flex-direction:column}
         <div class="about-hero__side">
           <img class="portrait" src="portrait_web.jpg" loading="lazy" decoding="async" alt="Andrea's Kit — portrait overlaid with colour stripes.">
           <p class="bio">Andrea's Kit makes collages from borrowed signals and the small mistakes that survive translation, reorganizing what was already there until the seams disappear.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ CONTACT ============ -->
-  <section class="screen" id="contact" aria-label="Contact">
-    <div class="contact">
-      <div class="contact__inner">
-        <div class="eyebrow mono">Contact</div>
-        <div class="contact__block">
-          <a class="contact__email" href="mailto:pierre@andreaskit.com">pierre@andreaskit.com</a>
-        </div>
-        <div class="socials mono">
-          <a href="https://open.spotify.com/artist/2OTeG7eCENUFkdhiqKXx3T" target="_blank" rel="noopener">Spotify</a>
-          <a href="https://soundcloud.com/andreas-kit" target="_blank" rel="noopener">SoundCloud</a>
-          <a href="https://www.instagram.com/andreaskit_music/" target="_blank" rel="noopener">Instagram</a>
+          <div class="about-contact">
+            <div class="about-contact__label mono">Contact</div>
+            <a class="about-contact__email" href="mailto:pierre@andreaskit.com">pierre@andreaskit.com</a>
+            <div class="socials mono">
+              <a href="https://open.spotify.com/artist/2OTeG7eCENUFkdhiqKXx3T" target="_blank" rel="noopener">Spotify</a>
+              <a href="https://soundcloud.com/andreas-kit" target="_blank" rel="noopener">SoundCloud</a>
+              <a href="https://www.instagram.com/andreaskit_music/" target="_blank" rel="noopener">Instagram</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -301,7 +287,7 @@ main{flex:1;display:flex;flex-direction:column}
 
 <script>
 (function(){
-  var SCREENS = ['music','about','contact'];
+  var SCREENS = ['music','about'];
   var navLinks = document.querySelectorAll('.nav a');
 
   function show(screen){
