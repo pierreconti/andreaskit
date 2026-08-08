@@ -108,15 +108,11 @@ main{flex:1;display:flex;flex-direction:column}
 .listen{
   display:inline-flex;align-items:center;gap:9px;margin:4px 0 30px;
   font-size:12px;line-height:1;letter-spacing:.12em;text-transform:uppercase;
-  border:1px solid var(--paper);padding:14px 18px;border-radius:100px;min-height:22px;
+  color:var(--accent);border:1px solid var(--accent);padding:14px 18px;border-radius:100px;min-height:22px;
   transition:background .2s ease,color .2s ease,border-color .2s ease;
 }
-.listen:hover{background:var(--paper);color:var(--ink)}
+.listen:hover{background:var(--accent);border-color:var(--accent);color:var(--ink)}
 .listen svg{width:13px;height:13px}
-.listen--spotify{border-color:#1db954;color:#1db954}
-.listen--spotify:hover{background:#1db954;border-color:#1db954;color:#08130b}
-.listen--soundcloud{border-color:#ff5500;color:#ff5500}
-.listen--soundcloud:hover{background:#ff5500;border-color:#ff5500;color:#1a0800}
 .release__credit{display:flex;align-items:center;gap:12px 18px;width:max-content;max-width:100%;margin:0 0 30px}
 .release__credit .release__meta{margin:0}
 .release__credit .listen{margin:0}
